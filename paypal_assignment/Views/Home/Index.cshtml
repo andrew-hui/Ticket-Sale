@@ -4,17 +4,64 @@
 }
 
 <h2>Welcome!</h2>
-<div class="row">
-    <div class="col-sm-6">Event Information</div>
-    <div class="col-sm-6">Kobe's Last Game</div>
+<div style="overflow:auto">
+    <div class="col-md-2">
+        <h5><b>Sunday</b></h5>
+        <h4><b>Mar 6</b></h4>
+        <h5><b>12:30 PM</b></h5>
+        <h6>STAPLES CENTER</h6>
+    </div>
+    <div class="col-md-2" style="text-align:right">
+        <h6><b>GOLDEN STATE</b></h6>
+        <h6><b>WARRIORS</b></h6>
+    </div>
+    <div class="col-md-1" style="text-align:center">
+        <img src="~/Images/gsw.gif" />
+    </div>
+    <div class="col-md-1" style="height:64px;text-align:center;display:table">
+        <span style="vertical-align:middle;display:table-cell"><b>@@</b></span>
+    </div>
+    <div class="col-md-1" style="text-align:center">
+        <img src="~/Images/lal.gif" />
+    </div>
+    <div class="col-md-2" style="text-align:left">
+        <h6><b>LOS ANGELES</b></h6>
+        <h6><b>LAKERS</b></h6>
+    </div>
+    <div class="col-md-1" style="height:64px;text-align:center;display:table">
+        <span style="vertical-align:middle;display:table-cell">$590.00</span>
+    </div>
+    <div class="col-md-2" style="text-align:center;height:64px;display:table">
+        <div style="vertical-align:middle;display:table-cell">
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="W55KM63KJPDF6">
+                <input type="hidden" name="custom" value="@ViewBag.SessionID" />
+                <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+        </div>
+    </div>
 </div>
-
-<div class="col-sm-12">
-    <p>Cost: $499.99</p>
+<br /><br /><br /><br />
+<div class="table-responsive">
+    <table class="table table-striped">
+        <caption><b>Don't have a PayPal account? Use the information below.</b></caption>
+        <tr>
+            <th>Credit Card Number</th>
+            <th>Expiration Date</th>
+            <th>Address Line</th>
+            <th>City</th>
+            <th>ZIP Code</th>
+            <th>Phone Number</th>
+        </tr>
+        <tr>
+            <td>4032033687203948</td>
+            <td>02/2021</td>
+            <td>1111 S Figueroa St</td>
+            <td>Los Angeles</td>
+            <td>90015</td>
+            <td>4085393627</td>
+        </tr>
+    </table>
 </div>
-<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <input type="hidden" name="cmd" value="_s-xclick">
-    <input type="hidden" name="hosted_button_id" value="W55KM63KJPDF6">
-    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>

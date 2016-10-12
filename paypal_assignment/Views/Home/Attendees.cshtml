@@ -17,16 +17,16 @@
             <th>
                 Last Name
             </th>
-            <th>
+            <th class="hidden-xs">
                 Session ID
             </th>
-            <th>
+            <th class="hidden-xs">
                 Transaction ID
             </th>
             <th>
                 Total Tickets
             </th>
-            <th>
+            <th class="hidden-xs">
                 Transaction Amount
             </th>
         </tr>
@@ -43,16 +43,16 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.lastname)
                 </td>
-                <td>
+                <td class="hidden-xs">
                     @Html.DisplayFor(modelItem => item.custom)
                 </td>
-                <td>
+                <td class="hidden-xs">
                     @Html.DisplayFor(modelItem => item.transactionID)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.quantity)
                 </td>
-                <td>
+                <td class="hidden-xs">
                     $@Html.DisplayFor(modelItem => item.amount)
                 </td>
             </tr>
