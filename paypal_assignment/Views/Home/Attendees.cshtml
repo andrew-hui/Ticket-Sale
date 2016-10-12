@@ -1,0 +1,62 @@
+﻿@model IEnumerable<paypal_assignment.Models.IPN>
+
+@{
+    ViewBag.Title = "Attendees";
+}
+
+<h2>Attendees</h2>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <tr>
+            <th>
+                Purchase Time
+            </th>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                Session ID
+            </th>
+            <th>
+                Transaction ID
+            </th>
+            <th>
+                Total Tickets
+            </th>
+            <th>
+                Transaction Amount
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.txTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.firstname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lastname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.custom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.transactionID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.quantity)
+                </td>
+                <td>
+                    $@Html.DisplayFor(modelItem => item.amount)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

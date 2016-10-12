@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="paypalModelStoreContainer" CdmEntityContainer="paypalEntities">
+    <EntitySetMapping Name="IPNs">
+      <EntityTypeMapping TypeName="paypalModel.IPN">
+        <MappingFragment StoreEntitySet="IPN">
+          <ScalarProperty Name="transactionID" ColumnName="transactionID" />
+          <ScalarProperty Name="txTime" ColumnName="txTime" />
+          <ScalarProperty Name="custom" ColumnName="custom" />
+          <ScalarProperty Name="buyerEmail" ColumnName="buyerEmail" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="paymentStatus" ColumnName="paymentStatus" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

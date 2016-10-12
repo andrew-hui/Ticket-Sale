@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="paypalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="IPN">
+    <Key>
+      <PropertyRef Name="transactionID" />
+    </Key>
+    <Property Name="transactionID" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="txTime" Type="datetime" />
+    <Property Name="custom" Type="varchar" MaxLength="128" />
+    <Property Name="buyerEmail" Type="varchar" MaxLength="128" />
+    <Property Name="amount" Type="money" />
+    <Property Name="paymentStatus" Type="varchar" MaxLength="64" />
+    <Property Name="firstname" Type="varchar" MaxLength="128" />
+    <Property Name="lastname" Type="varchar" MaxLength="128" />
+    <Property Name="quantity" Type="int" />
+  </EntityType>
+  <EntityContainer Name="paypalModelStoreContainer">
+    <EntitySet Name="IPN" EntityType="Self.IPN" Schema="andrewh" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
